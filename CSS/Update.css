@@ -1,0 +1,112 @@
+@font-face { font-family: Formula1; src: url('Formula1-Regular.ttf'); } 
+::-webkit-scrollbar {display:none;}
+body {
+    background: linear-gradient(to left, #c31432, #240b36);
+    font-family: Formula1;    
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: gold;
+    font-size: 15px;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+
+#div1 {
+    text-align: center;
+    color: gold;
+    font-size: 25px;
+}
+
+#div1 h1:hover {
+    text-shadow: #fc0 1px 0 10px;
+}
+
+#hr1:hover {
+    box-shadow: #fc0 1px 0 10px;;
+}
+
+#div2 {
+    margin-top: 3%;
+    text-align: center;
+    color: lightyellow;
+    font-size: 20px;
+}
+
+#div3 {
+    margin: 3% 12% 3% 12%;
+    text-align: justify;   
+    color: aliceblue; 
+}
+
+.but {
+    height: 40px;
+    width: 100px;
+    background-color: rgb(190, 96, 96);
+    color: black;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    display: inline-block;
+    margin-right: 2%;
+    font-family: Formula1;
+}
+
+.but:hover {
+    color: rgb(190, 96, 96);
+    background-color: black;
+}
+
+#div4 {
+    width: 50%;
+    margin: 3% auto auto auto;
+    text-align: center;  
+    border: 2px solid lightgrey;
+    border-radius: 10px;
+    background-color: lightgrey;  
+    display: none;
+}
+
+#tab1 {
+    width: 100%;
+    font-size: 20px;
+    padding: 20px;
+}
+
+.inp {
+    width: 200px;
+    height: 20px;
+    font-family: Formula1;
+}
+
+#div5 {
+    width: 50%;
+    margin: 3% auto auto auto;
+    text-align: center;  
+    border: 2px solid lightgrey;
+    border-radius: 10px;
+    background-color: lightgrey;  
+}
+
+#tab2 {
+    width: 100%;
+    font-size: 20px;
+    padding: 20px;
+}

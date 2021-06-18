@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weatherizer</title>
+    <link rel = "icon" href ="ICON.png"  type = "image/x-icon">
+    <link rel="stylesheet" href="Delete.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Weatherizer</title>
+</head>
+<body>   
+    <div id="div1">
+        <h1>Weatherizer</h1>
+    </div> 
+    <hr id="hr1" style="border: 3px solid gold; border-radius: 5px;">  
+    <ul>
+        <li><a href="/Profile">Profile</a></li>
+        <li><a href="Delete.html">Delete</a></li>
+        <li><a href="Update.html">Update</a></li>  
+        <li><a href="Index.html">Log Out</a></li>  
+    </ul>    
+    <div id="div2">
+        <h2>Delete</h2>
+    </div> 
+    <div id="div4">
+        <form action="/Delete" method="POST">
+            <h1>Information</h1>
+            <p>Please provide the username and your password to delete your account!</p>
+            <hr style="border: 3px solid black; border-radius: 5px;">
+            <table id="tab1">
+                <tr>
+                    <td> Username </td><td> <i class="fa fa-user"></i> </td><td> : </td><td> <input type="text" name="username" class="inp" required> </td>
+                </tr>
+                <tr>
+                    <td colspan="4" align="center"><hr style="border: 1px solid black; border-radius: 5px;"></td>
+                </tr>
+                <tr>
+                    <td> Password </td><td> <i class="fa fa-key"></i> </td><td> : </td><td> <input type="password" name="password" class="inp" required> </td>
+                </tr>
+                <tr>
+                    <td colspan="4" align="center"><hr style="border: 1px solid black; border-radius: 5px;"></td>
+                </tr>
+                <tr>
+                    <td colspan="4" align="center"><input type="submit" name="submit" value="Delete" class="but"></td>
+                </tr>
+            </table>
+        </form>
+    </div>    
+</body>
+</html>

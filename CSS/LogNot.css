@@ -1,0 +1,51 @@
+@font-face { font-family: Formula1; src: url('Formula1-Regular.ttf'); } 
+::-webkit-scrollbar {display:none;}
+body {
+    background: linear-gradient(to right, #2980b9, #6dd5fa, #ffffff);
+    font-family: Formula1;    
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: gold;
+    font-size: 15px;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+
+#div1 {
+    text-align: center;
+    color: gold;
+    font-size: 25px;
+}
+
+#div1 h1:hover {
+    text-shadow: #fc0 1px 0 10px;
+}
+
+#hr1:hover {
+    box-shadow: #fc0 1px 0 10px;;
+}
+
+#div2 {
+    margin-top: 3%;
+    text-align: center;
+    color: red;
+    font-size: 20px;
+}

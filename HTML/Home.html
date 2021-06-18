@@ -1,0 +1,292 @@
+<html>
+    <head>
+        <title>Weatherizer</title>
+        <link rel = "icon" href ="ICON.png"  type = "image/x-icon">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap" rel="stylesheet">
+    </head>
+    <style>
+        @font-face { font-family: Formula1; src: url('Formula1-Regular.ttf'); } 
+        ::-webkit-scrollbar {display:none;}
+        body{
+            background: linear-gradient(to left, #c31432, #240b36);
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            font-size: 62.5%;
+            height: 100%;
+            font-family: Formula1;
+        }
+
+        div h3{
+            text-align: center;
+            position: absolute;
+            top:155px;
+            margin-left: 82%;
+            font-size: 15px;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: gold;
+            font-size: 15px;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover {
+            background-color: #111;
+        }
+
+        .box{
+            height: 85vh;
+            margin: 3% auto auto auto;
+            padding-bottom: 3%;
+            width: 35vw;
+            border-radius: 0.5em;
+            box-shadow: 0 0.2rem 3rem rgba(0,0,0,0.2);
+            background: #a5bbdd;
+            position: relative;
+            overflow: hidden;
+            transform: translate3d(0,0,0);
+        }
+        .info{
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 45%;
+            z-index: 4;
+        }
+        .location{
+            margin-top: 1.5rem;
+            text-align: center;
+            font-weight: 600;
+            font-size: 30px;;
+
+        }
+        #date{
+            text-align: center;
+            margin-top: 0.5rem;
+            color: #57606f;
+            font-size: 0.8rem;
+            font-weight: 300;
+            text-transform: uppercase;
+        }
+        .temp{
+            text-align: center;
+            margin-top: 0.5rem;
+            
+            font-size: 1.8rem;
+            
+        }
+        .tempmin_max{
+            text-align: center;
+            margin-top: 0;
+            font-weight: 300;
+            font-size: 1rem;
+            color: #57606f;
+            padding-bottom: 5px;
+            
+        }
+        #weathercon{
+            height: 40%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 3em;
+        }
+        #weathercon #wicon{
+            font-size: 6rem;
+            animation: fas-anime 3s linear infinite alternate;
+        }
+        @keyframes fas-anime {
+            from{
+                transform: scale(2);
+            }
+            to{
+                transform: scale(3);
+            }
+            
+        }
+        .fa-street-view{
+                animation: rotates 3s linear infinite alternate;
+        }
+        @keyframes rotates {
+            from{
+                transform: translateX(-0.5rem);
+            }
+            to{
+                transform: translateX(0.5rem);
+            }
+        }
+        .wave{
+            opacity: 0.3;
+            position: absolute;
+            top: 115%;
+            left: 50%;
+            background: white;
+            width: 50rem;
+            height: 50rem;
+            margin-top: -25rem;
+            margin-left: -25rem;
+            transform-origin: 50% 48%;
+
+            border-radius: 43%;
+            animation: drift 3000ms infinite linear;
+            z-index: 1;
+        }
+        .wave-three{
+            animation: drift 5000ms infinite linear;
+            z-index: 2  !important;
+            opacity: 0.2;
+        }
+        .wave-two{
+            animation: drift 7000ms infinite linear;
+            z-index: 3  !important;
+            opacity: 0.1;
+        }
+        @keyframes drift {
+            from{
+                transform: rotate(0deg);
+            }
+            from{
+                transform: rotate(360deg);
+            }
+        }
+        #search{
+            text-align: center;
+            position: relative;
+            font-family: Formula1;
+        }
+        #searchText{
+            padding: 6px;
+            border: none;
+            margin-top: 8px;
+            margin-right: 16px;
+            margin-left: 15px;
+            font-size: 17px;
+            width:60%;
+            border-radius: 10px;            
+        }
+        #searchButton{
+            
+            padding: 6px 10px;
+            margin-top: 8px;
+            margin-right: 16px;
+            background: #ddd;
+            border-radius: 5px;
+            font-size: 17px;
+            border: solid;
+            border-color: #5c83c5;
+            cursor: pointer;
+            width:15%;
+        }
+        #div1 {
+            text-align: center;
+            color: gold;
+            font-size: 25px;
+        }
+        #div1 h1:hover {
+            text-shadow: #fc0 1px 0 10px;
+        }
+        #hr1:hover {
+            box-shadow: #fc0 1px 0 10px;;
+        }     
+        #div2 {
+            margin-top: 3%;
+            text-align: center;
+            color: green;
+            font-size: 20px;
+        }   
+    </style>
+    <body>
+        <div id="div1">
+            <h1>Weatherizer</h1>
+        </div> 
+        <hr id="hr1" style="border: 3px solid gold; border-radius: 5px;">  
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="/Profile">Profile</a></li>
+            <li><a href="Delete.html">Delete</a></li>
+            <li><a href="Update.html">Update</a></li>  
+            <li><a href="Index.html">Log Out</a></li>          
+        </ul> 
+        <div id="div2">
+            <h2>Success!</h2>
+        </div>  
+        <div class="box">
+            <div class="wave -one"></div>
+            <div class="wave wave-two"></div>
+            <div class="wave wave-three"></div>
+            <div id="weathercon">
+                <img id="wicon" src="http://openweathermap.org/img/w/{%iconval%}.png " alt="Weather icon">
+            </div>
+            <div class="info">
+                <h2 class="location"><i class="fas fa-street-view" style="color:#2869a7"></i> {%location%},{%country%}</h2>
+                <form action="/Search" method="post" id="search">
+                    <input type="text" name="search" placeholder="Enter City Name" id="searchText"/>
+                    <button type="submit" id="searchButton"><i class="fa fa-search"></i></button>
+                </form>
+                <p id="date"></p>
+                <h1 class="temp">{%tempval%} &deg;C</h1>
+                <h1 class="tempmin_max">MIN {%tempmin%} &deg;C | MAX {%tempmax%} &deg;C</h1>
+            </div>           
+        </div> 
+        <script>
+            const curDate=document.getElementById("date");
+            const weathercon=document.getElementById("weathercon");
+            
+            
+            const getCurrentDay=()=>{
+                var weekday=new Array(7);
+                weekday[0]="SUN";
+                weekday[1]="MON";
+                weekday[2]="TUE";
+                weekday[3]="WED";
+                weekday[4]="THU";
+                weekday[5]="FRI";
+                weekday[6]="SAT";
+                let currentTime=new Date();
+               let day=weekday[currentTime.getDay()];
+               return day;
+               
+            };
+            const getCurrentTime=()=>{
+                
+                let now=new Date();
+                
+                var months=["JAN","FEB","MAR","APR","MAY","JUN","JUL","AUG","SEP","OCT","NOV","DEC"]
+                
+                var day=now.getDate();
+
+                var hours=now.getHours();
+                var mins=now.getMinutes();
+                let p="AM";
+                if(hours>11){
+                    p="PM";
+                    if(hours>12){
+                        hours-=12;
+                    }
+                }
+                if(mins<10){
+                    mins="0"+mins;
+                }
+                return `${months[now.getMonth()]} ${day} | ${hours}:${mins} ${p}`;              
+            };            
+            curDate.innerHTML=getCurrentDay()+" | "+getCurrentTime();
+        </script>
+    </body>
+</html>
